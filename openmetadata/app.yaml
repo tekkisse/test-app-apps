@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hiru-openmetadata
+  name: default
   namespace: hiru-openmetadata
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: hiru-openmetadata
+  project: default
   destination:
     server: https://kubernetes.default.svc
     namespace: hiru-openmetadata

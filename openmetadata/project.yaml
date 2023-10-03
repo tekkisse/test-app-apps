@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
   name: hiru-openmetadata
-  namespace: hiru-omd
+  namespace: hiru-openmetadata
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   labels:

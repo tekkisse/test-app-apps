@@ -21,7 +21,7 @@ spec:
   sources:
     - repoURL: "https://helm.open-metadata.org/"
       chart: openmetadata-dependencies
-      targetRevision: 1.1.13
+      targetRevision: 1.1.12
       helm:
         valueFiles:
         - $values/openmetadata/omddep.yaml
@@ -29,7 +29,7 @@ spec:
 
     - repoURL: "https://helm.open-metadata.org/"
       chart: openmetadata
-      targetRevision: 1.1.13
+      targetRevision: 1.1.12
       helm:
         valueFiles:
         - $values/openmetadata/omd.yaml

@@ -19,9 +19,9 @@ spec:
     - CreateNamespace=true # Namespace Auto-Creation ensures that namespace specified as the application destination exists in the destination cluster.
     - PruneLast=true # Allow the ability for resource pruning to happen as a final, implicit wave of a sync operation
   source:
-      repoURL: "https://helm.open-metadata.org/"
-      chart: openmetadata-dependencies
-      targetRevision: 1.1.12
+    repoURL: "https://helm.open-metadata.org/"
+    chart: openmetadata-dependencies
+    targetRevision: 1.1.12
 #      helm:
 #        valueFiles:
 #        - $values/openmetadata/manifest/omddep.yaml

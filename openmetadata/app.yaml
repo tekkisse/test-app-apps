@@ -1,15 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: omddep
-  namespace: default
+  name: openmetadata
+  namespace: hiru-openmetadata
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: omd
+  project: hiru-openmetadata
   destination:
     server: https://kubernetes.default.svc
-    namespace: omd
+    namespace: hiru-openmetadata
   syncPolicy:
     automated: # automated sync by default retries failed attempts 5 times with following delays between attempts ( 5s, 10s, 20s, 40s, 80s ); retry controlled using `retry` field.
       prune: true # Specifies if resources should be pruned during auto-syncing ( false by default ).
@@ -24,7 +24,7 @@ spec:
       targetRevision: 1.1.12
       helm:
         valueFiles:
-        - $values/openmetadata/omddep.yaml
+        - $values/openmetadata/manifest/omddep.yaml
         version: v3
 
     - repoURL: "https://helm.open-metadata.org/"
@@ -32,6 +32,6 @@ spec:
       targetRevision: 1.1.12
       helm:
         valueFiles:
-        - $values/openmetadata/omd.yaml
+        - $values/openmetadata/manifest/omd.yaml
         version: v3
 

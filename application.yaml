@@ -1,8 +1,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: k8s-testing
-  namespace: hiru-openmetadata
+  name: root-app
+  namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:

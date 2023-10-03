@@ -6,7 +6,7 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: omd
+  project: default
   destination:
     server: https://kubernetes.default.svc
     namespace: hiru-openmetadata

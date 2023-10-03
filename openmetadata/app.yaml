@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: openmetadata-dep
+  name: openmetadata-dep2
   namespace: hiru-openmetadata
   finalizers:
     - resources-finalizer.argocd.argoproj.io

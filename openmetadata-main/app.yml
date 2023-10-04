@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: openmetadata-dep
+  name: openmetadata
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -19,13 +19,6 @@ spec:
     - CreateNamespace=true # Namespace Auto-Creation ensures that namespace specified as the application destination exists in the destination cluster.
     - PruneLast=true # Allow the ability for resource pruning to happen as a final, implicit wave of a sync operation
   sources:
-    - repoURL: "https://helm.open-metadata.org/"
-      chart: openmetadata-dependencies
-      targetRevision: 1.1.14
-#      helm:
-#        valueFiles:
-#        - $values/openmetadata/manifest/omddep.yaml
-#        version: v3
     - repoURL: "https://helm.open-metadata.org/"
       chart: openmetadata
       targetRevision: 1.1.14

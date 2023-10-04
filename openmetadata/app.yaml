@@ -35,3 +35,4 @@ spec:
 #        version: v3
     - repoURL: "https://github.com/tekkisse/test-app-apps.git"
       targetRevision: HEAD
+      ref: values

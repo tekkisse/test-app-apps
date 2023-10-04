@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: git-watcher
+  name: test-app-deploy
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io

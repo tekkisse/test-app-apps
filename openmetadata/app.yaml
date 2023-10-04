@@ -33,6 +33,6 @@ spec:
 #        valueFiles:
 #        - $values/openmetadata/manifest/omd.yaml
 #        version: v3
-    - repoURL: "https://github.com/tekkisse/test-app-apps.git"
+    - repoURL: "https://github.com/tekkisse/test-app-apps"
       targetRevision: HEAD
-      ref: openmetadata
+      ref: openmetadata/manifest
